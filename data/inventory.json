@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "stock": 29,
+      "image": "",
+      "sku": "WA10",
+      "description": "Essential for safely reconstituting your peptides and ensuring precise, contamination-free research preparations every time.",
+      "name": "BAC Water"
+    },
+    {
+      "stock": 6,
+      "image": "",
+      "sku": "BC10",
+      "description": "Heal joint pain, reduce inflammation, and boost skin and gut health with this powerful recovery peptide.",
+      "name": "BPC-157"
+    },
+    {
+      "stock": 10,
+      "image": "",
+      "sku": "CD5",
+      "description": "Elevate your growth hormone levels for enhanced muscle growth, fat burning, and youthful vitality.",
+      "name": "CJC"
+    },
+    {
+      "stock": 4,
+      "image": "/assets/GHK-CU.png",
+      "sku": "CU50",
+      "description": "Rejuvenate your skin, fade wrinkles, and stimulate hair growth with this potent copper-infused peptide.",
+      "name": "GHK"
+    },
+    {
+      "stock": 9,
+      "image": "",
+      "sku": "ML10",
+      "description": "Get a sun-kissed tan effortlessly while curbing appetite and enhancing your overall glow.",
+      "name": "Melanotan"
+    },
+    {
+      "stock": 12,
+      "image": "",
+      "sku": "RT10",
+      "description": "Supercharge weight loss, stabilize blood sugar, and optimize your metabolism for peak performance.",
+      "name": "Reta"
+    },
+    {
+      "stock": 7,
+      "image": "",
+      "sku": "SM5",
+      "description": "Sharpen your focus, boost memory, and melt away stress with this ultimate cognitive enhancer.",
+      "name": "Semax"
+    },
+    {
+      "stock": 10,
+      "image": "",
+      "sku": "BT5",
+      "description": "Accelerate injury recovery, ease inflammation, and gain better mobility with this top-tier healing peptide.",
+      "name": "TB"
+    }
+  ]
+}

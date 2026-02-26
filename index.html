@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peptide Inventory</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1>Current Product Inventory</h1>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="inventory-grid" class="inventory-grid" aria-live="polite"></section>
+      <p id="status" class="status">Loading inventory...</p>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in touch</h2>
+        <form id="contact-form" action="https://formspree.io/f/mwvnyybl" method="POST">
+          <div class="form-field-group">
+            <label for="product-select">Product of interest</label>
+            <select id="product-select" name="product_select" required>
+              <option value="">Select a product</option>
+            </select>
+          </div>
+
+          <div id="other-product-field" class="form-field-group" hidden>
+            <label for="other-product">Other product</label>
+            <input
+              id="other-product"
+              type="text"
+              name="other_product"
+              placeholder="Enter product name"
+            />
+          </div>
+
+          <div class="form-field-group">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" type="text" name="name" autocomplete="name" required />
+          </div>
+
+          <div class="contact-row">
+            <div class="form-field-group">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" type="email" name="email" autocomplete="email" />
+            </div>
+            <div class="form-field-group">
+              <label for="contact-phone">Phone</label>
+              <input id="contact-phone" type="tel" name="phone" autocomplete="tel" />
+            </div>
+          </div>
+
+          <p class="form-hint">Provide at least one contact method: email or phone.</p>
+
+          <button type="submit" class="contact-submit">Send</button>
+          <p id="contact-thanks" class="contact-feedback success" hidden>
+            Thanks, we will be in touch!
+          </p>
+          <p id="contact-error" class="contact-feedback error" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
