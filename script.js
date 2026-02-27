@@ -1,7 +1,12 @@
 const DEFAULT_DESCRIPTION =
   "High-purity peptide formulation suitable for research inventory cataloging.";
-const DEFAULT_IMAGE = "/assets/generic-peptide.png";
+const SITE_PREFIX = "/pepsite";
+const DEFAULT_IMAGE = `${SITE_PREFIX}/assets/generic-peptide.png`;
 const OTHER_PRODUCT_VALUE = "__other__";
+
+function withSitePrefix(path) {
+  return path.startsWith("/") ? `${SITE_PREFIX}${path}` : path;
+}
 
 function updateProductSelect(products) {
   const productSelect = document.getElementById("product-select");
@@ -183,7 +188,7 @@ async function loadInventory() {
   const gridEl = document.getElementById("inventory-grid");
 
   try {
-    const response = await fetch("/data/inventory.json", { cache: "no-store" });
+    const response = await fetch(`${SITE_PREFIX}/data/inventory.json`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -205,7 +210,7 @@ async function loadInventory() {
       card.className = "card";
 
       const image = document.createElement("img");
-      image.src = item.image || DEFAULT_IMAGE;
+      image.src = item.image ? withSitePrefix(item.image) : DEFAULT_IMAGE;
       image.alt = `${item.name || "Peptide product"} image`;
       image.loading = "lazy";
       image.onerror = () => {
